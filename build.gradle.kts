@@ -6,8 +6,8 @@ import java.net.URL
 
 plugins {
 	id("maven-publish")
-	id("fabric-loom") version "1.13.3"
-	id("babric-loom-extension") version "1.13.3"
+	id("fabric-loom") version "1.15.3"
+	id("babric-loom-extension") version "1.15.3"
 }
 
 //noinspection GroovyUnusedAssignment
@@ -75,7 +75,7 @@ dependencies {
 
 	// StAPI itself.
 	// transitiveImplementation tells babric loom that you want this dependency to be pulled into other mod's development workspaces. Best used ONLY for required dependencies.
-	//modImplementation("net.modificationstation:StationAPI:${project.properties["stationapi_version"]}")
+	modImplementation("net.modificationstation:StationAPI:${project.properties["stationapi_version"]}")
 
 	// Extra mods.
 	// https://github.com/calmilamsy/glass-config-api
